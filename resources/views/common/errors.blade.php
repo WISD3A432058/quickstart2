@@ -1,10 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 2017/10/19
- * Time: 下午 05:35
- */
+
+
 @if (count($errors) > 0)
     <!-- 表單錯誤清單 -->
     <div class="alert alert-danger">
