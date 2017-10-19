@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-{{--<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,24 +76,5 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-</body>
-</html>
---}}
-
-<html lang="en">
-<head>
-    <title>Laravel 快速入門 - 進階</title>
-
-    <!-- CSS 及 JavaScript -->
-</head>
-
-<body>
-<div class="container">
-    <nav class="navbar navbar-default">
-        <!-- Navbar 內容 -->
-    </nav>
-</div>
-
-@yield('content')
 </body>
 </html>
