@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 2017/10/19
- * Time: 下午 05:28
- */
-// resources/views/tasks/index.blade.php
-/*
 @extends('layouts.app')
 
 @section('content')
@@ -41,13 +32,6 @@
         </form>
     </div>
 
-    <!-- 代辦：目前任務 -->
-*/
-@extends('layouts.app')
-
-@section('content')
-    <!-- 建立任務表單... -->
-
     <!-- 目前任務 -->
     @if (count($tasks) > 0)
         <div class="panel panel-default">
@@ -73,8 +57,14 @@
                                 <div>{{ $task->name }}</div>
                             </td>
 
+                            <!-- 刪除按鈕 -->
                             <td>
-                                <!-- 代辦：刪除按鈕 -->
+                                <form action="/task/{{ $task->id }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+
+                                    <button>刪除任務</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
